@@ -36,7 +36,7 @@ def authenticate():
         if username == user[0] and password == user[1]:
             session['username'] = username
             return render_template('home.html', status="Successfully logged in!")
-        if username == user[0] and passoword != user[1]:
+        if username == user[0] and password != user[1]:
             return render_template('login.html', login="Invalid Password!")
 
     return render_template('login.html', login="Submitted username is not registered!")
