@@ -1,3 +1,9 @@
+# Garlic Fries: Diana Akhmedova, Samantha Hua, Gitae Park, Vivian Teo
+# SoftDev
+# P01 -- NBA Love Story
+# 2022-12-14
+# time spent:  hrs
+
 import sqlite3
 
 from flask import Flask, redirect, render_template, request, session, url_for
@@ -37,10 +43,15 @@ def authenticate():
             session['username'] = username
             return render_template('home.html', status="Successfully logged in!")
         if username == user[0] and passoword != user[1]:
-            return render_template('login.html', login=:"Invalid Password!")
+            return render_template('login.html', login="Invalid Password!")
 
     return render_template('login.html', login="Submitted username is not registered!")
 
 @app.route("/register")
 def register():
     return render_template('createaccount.html')
+
+if __name__ == "__main__": #false if this file imported as module
+    #enable debugging, auto-restarting of server when this file is modified
+    app.debug = True 
+    app.run()
