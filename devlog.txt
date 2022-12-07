@@ -1,21 +1,3 @@
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-USAGE:
-* Replace all fields, angle brackets included, with specified info.
-  eg, pd <pd#> --> pd 3
-* Delete these instructions once all teammates understand usage.
-  (from tilde bar above to tilde bar below)
-* rename this file devlog.txt
-
-devlog--
-Use keyboard shortcut to jump to end,
- replicate entry template, (Ctrl-Shift up x5, Ctrl-X, Ctrl-V x2)
- modify appropriately.
-Each entry should begin with the following format:
- firstL -- TIMESTAMP\n
-e.g.: 
-clydeS -- 2999-12-31 23:59
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
 Garlic Fries
 Diana Akhmedova
 Samantha Hua
@@ -23,16 +5,16 @@ Gitae Park
 Vivian Teo
 pd 7
 ---------------------
-<Project Title/Description>
+NBA Love Story
 
 
- ______   ______   __   __   __       ______   _______     
-/_____/\ /_____/\ /_/\ /_/\ /_/\     /_____/\ /______/\    
-\:::_ \ \\::::_\/_\:\ \\ \ \\:\ \    \:::_ \ \\::::__\/__  
- \:\ \ \ \\:\/___/\\:\ \\ \ \\:\ \    \:\ \ \ \\:\ /____/\ 
-  \:\ \ \ \\::___\/_\:\_/.:\ \\:\ \____\:\ \ \ \\:\\_  _\/ 
-   \:\/.:| |\:\____/\\ ..::/ / \:\/___/\\:\_\ \ \\:\_\ \ \ 
-    \____/_/ \_____\/ \___/_(   \_____\/ \_____\/ \_____\/ 
+ ______   ______   __   __   __       ______   _______
+/_____/\ /_____/\ /_/\ /_/\ /_/\     /_____/\ /______/\
+\:::_ \ \\::::_\/_\:\ \\ \ \\:\ \    \:::_ \ \\::::__\/__
+ \:\ \ \ \\:\/___/\\:\ \\ \ \\:\ \    \:\ \ \ \\:\ /____/\
+  \:\ \ \ \\::___\/_\:\_/.:\ \\:\ \____\:\ \ \ \\:\\_  _\/
+   \:\/.:| |\:\____/\\ ..::/ / \:\/___/\\:\_\ \ \\:\_\ \ \
+    \____/_/ \_____\/ \___/_(   \_____\/ \_____\/ \_____\/
 ==============================================================
 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 
@@ -43,3 +25,20 @@ vivianT -- 2022-12-6 22:06
 * Edited __init__.py so app.run() and app.debug is included, wasn't running before
 ==============================================================
 
+saamnthaH -- 2022-12-7 01:25
+--------------------------------------------------------------
+* added template to devlog
+* made edits to the design doc based on the feedback
+    * most of our feedback were questions that would've been answered if they had all of the pages of our design doc
+    * we were inspired by other groups to include more specific python files for the different aspects of our site (different api calls, algos, etc.)
+    * we only needed 2 keys for our 5 APIs because the rest didn't need keys. this was not clear in our design doc so we added a note.
+    * considered adding more html pages / thought about how we want the previous stages of the site to be saved and viewed by the user.
+==============================================================
+
+template:
+name -- 2022-12-x xx:xx
+--------------------------------------------------------------
+*
+*
+*
+==============================================================
