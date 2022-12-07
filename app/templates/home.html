@@ -54,6 +54,7 @@
             <img class="card-img-top" src="placeholder.png" alt="Card image cap">
             <div class="card-body">
               <h5 class="card-title">Name</h5>
+              <!-- stats -->
               <p class="card-text">About/Stats</p>
             </div>
           </div>        
@@ -64,8 +65,9 @@
           <div class="card" style="width: 75%;">
             <img class="card-img-top" src="placeholder.png" alt="Card image cap">
             <div class="card-body">
-              <h5 class="card-title">Name</h5>
-              <p class="card-text">About/Stats</p>
+              <h5 class="card-title">{{Name}}</h5>
+              <!-- stats -->              
+              <p class="card-text">{{About/Stats}}</p>
             </div>
           </div>        
         </div>
@@ -74,6 +76,32 @@
     </div>
 
     <br><br><br>
+
+    <!-- -----------user actions----------- -->
+
+    <div class="container text-center border">
+      <div class="row justify-content-md-center border">
+        <div class="col-sm border">
+          <!-- col 1: directions telling user what the button does -->
+          Retrieve Item to give to {{insert name}}
+        </div>
+        <div class="col-sm border">
+          <!-- col 2: button that does said action -->
+          <button type="submit" class="btn btn-info">Retrieve and give item</button>            
+        </div>
+
+        <div class="col-sm border">
+          <!-- col 3: display item after button is pressed-->
+          
+        </div>
+
+      </div>
+    </div>
+
+
+
+
+
 
 <!-- Sliding between stuff, cool feature -->
     <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">

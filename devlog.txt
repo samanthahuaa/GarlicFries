@@ -35,10 +35,14 @@ saamnthaH -- 2022-12-7 01:25
     * considered adding more html pages / thought about how we want the previous stages of the site to be saved and viewed by the user.
 ==============================================================
 
-
 gitaeP -- 2022-12-7 12:15
 --------------------------------------------------------------
 * Finished the login/register 
+==============================================================
+
+vivianT -- 2022-12-6 12:43
+--------------------------------------------------------------
+* continued working on home.html, working on getting buttons to work for displaying stuff once a button is pushed fir retrieving item
 ==============================================================
 
 template:
