@@ -35,6 +35,12 @@ saamnthaH -- 2022-12-7 01:25
     * considered adding more html pages / thought about how we want the previous stages of the site to be saved and viewed by the user.
 ==============================================================
 
+
+gitaeP -- 2022-12-7 12:15
+--------------------------------------------------------------
+* Finished the login/register 
+==============================================================
+
 template:
 name -- 2022-12-x xx:xx
 --------------------------------------------------------------
