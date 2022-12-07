@@ -1,16 +1,10 @@
-# Garlic Fries: Diana Akhmedova, Samantha Hua, Gitae Park, Vivian Teo
-# SoftDev
-# P01 -- NBA Love Story
-# 2022-12-14
-# time spent:  hrs
-
 import sqlite3
 
 from flask import Flask, redirect, render_template, request, session, url_for
 
 # sqlite
 
-DB_FILE = "site.db"
+DB_FILE = "tables.db"
 db = sqlite3.connect(DB_FILE, check_same_thread=False)
 c = db.cursor()
 
@@ -35,7 +29,7 @@ def authenticate():
     username = request.form['username']
     password = request.form['password']
 
-    c.execute("SELECT * FROM logins;")
+    c.execute("SELECT * FROM login;")
     user_logins = c.fetchall()
 
     for user in user_logins:
@@ -51,7 +45,28 @@ def authenticate():
 def register():
     return render_template('createaccount.html')
 
-if __name__ == "__main__": #false if this file imported as module
-    #enable debugging, auto-restarting of server when this file is modified
-    app.debug = True 
+@app.route("/signup", methods=['GET', 'POST'])
+def signup():
+    newUser = request.form['username']
+    newPass = request.form['password']
+
+    c.execute("SELECT * FROM login;")
+    user_logins = c.fetchall()
+
+    for user in user_logins:
+        if newUser == user[0]:
+            return render_template('createaccount.html', status = "Submitted username is already in use.")
+
+    c.execute("INSERT INTO login VALUES (?,?);", (newUser, newPass))
+    db.commit()
+    return render_template('login.html', login="New user has been created successfully! Log in with your new credentials!")
+
+
+@app.route('/logout', methods=['GET', 'POST'])
+def logout():
+    session.pop('username', None)
+    return redirect(url_for('index'))
+
+if __name__ == "__main__":
+    app.debug = True
     app.run()
