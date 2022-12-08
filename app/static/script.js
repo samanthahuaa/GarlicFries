@@ -24,9 +24,28 @@ function give_item() {
     if (document.getElementById('yes-no').checked) {
         var correct = document.getElementById('display-yes-no')
         correct.style.opacity = "1";
+
+        // display the next step of the storyline, love-calc, show compatability
+        var correct = document.getElementById('display-section-3')
+        correct.style.opacity = "1";
     }
     else {
         var correct = document.getElementById('display-yes-no')
+        correct.style.opacity = "0";
+    }
+  }
+
+  function display_love_calc() {
+    if (document.getElementById('love-calc').checked) {
+        var correct = document.getElementById('display-love-calc')
+        correct.style.opacity = "1";
+
+        // display the next step of the storyline, date schedule
+        var correct = document.getElementById('display-section-4')
+        correct.style.opacity = "1";        
+    }
+    else {
+        var correct = document.getElementById('display-love-calc')
         correct.style.opacity = "0";
     }
   }

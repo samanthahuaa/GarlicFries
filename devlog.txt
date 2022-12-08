@@ -53,6 +53,11 @@ vivianT -- 2022-12-7 21:00
 * Formatted the logout button better (in a card)
 * Moved placeholder image into static folder so we can now see it when running server.
 ==============================================================
+vivianT -- 2022-12-8 13:19
+--------------------------------------------------------------
+* Made two more sections of our storyline: love calculating (seeing compatability) and scheduling date. 
+* Got rid of the grid format and sticking with the dropdown format.
+==============================================================
 
 
 template:

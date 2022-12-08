@@ -7,10 +7,27 @@
     opacity: 0;
 }
 
-/* reaction itself*/
+/* yes-no section: reaction itself*/
 #display-yes-no {
     opacity: 0;
 }
+
+/* love-calc section */
+#display-section-3 {
+    opacity: 0;
+}
+
+/* show compatability itself*/
+#display-love-calc {
+    opacity: 0;
+}
+
+/* love-calc section */
+#display-section-4 {
+    opacity: 0;
+}
+
+
 
 .center {
     align-items: center;
