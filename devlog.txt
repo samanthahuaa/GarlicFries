@@ -42,7 +42,7 @@ dianaA -- 2022-12-07 12:00
 
 gitaeP -- 2022-12-7 12:15
 --------------------------------------------------------------
-* Finished the login/register 
+* Finished the login/register
 ==============================================================
 
 vivianT -- 2022-12-07 12:43
@@ -63,6 +63,14 @@ vivianT -- 2022-12-07 21:00
 dianaA -- 2022-12-08 13:00
 --------------------------------------------------------------
 * Fixed formatting on the login/register pages and added more buttons
+==============================================================
+
+samanthaH -- 2022-12-08 13:00
+--------------------------------------------------------------
+* Updated group on API issues and as a group, we made decisions about what type of info we wanted to include in our site from the API
+* removed the NFL API from our plan because it's broken. replaced with sunset sunrise API
+* With the help of dianaA, we updated the design doc with the new API plan
+* worked on incorporating today's date into our sunset/sunrise algo
 ==============================================================
 
 template:
