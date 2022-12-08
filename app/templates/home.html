@@ -1,3 +1,9 @@
+<!-- Garlic Fries: Diana Akhmedova, Samantha Hua, Gitae Park, Vivian Teo
+SoftDev
+P01 -- NBA Love Story
+2022-12-14
+time spent:  hrs -->
+
 <!DOCTYPE html>
 
 <html lang="en">
@@ -7,6 +13,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>NBA Love Story</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link href="../static/css/styles.css" rel="stylesheet">
   </head>
 
   <body>
@@ -20,6 +27,8 @@
 
     {{status}}
 
+    <script src="../static/script.js"></script>
+
     <script async src="https://cdn.jsdelivr.net/npm/es-module-shims@1/dist/es-module-shims.min.js" crossorigin="anonymous"></script>
     <script type="importmap">
     {
@@ -31,7 +40,6 @@
     </script>
     <script type="module">
       import * as bootstrap from 'bootstrap'
-
       new bootstrap.Popover(document.getElementById('popoverButton'))
     </script>
     
@@ -51,11 +59,11 @@
         <!-- Player 1 -->
         <div class="col">
           <div class="card" style="width: 75%;">
-            <img class="card-img-top" src="placeholder.png" alt="Card image cap">
+            <img class="card-img-top" src="/../static/placeholder.png" alt="Card image cap">
             <div class="card-body">
-              <h5 class="card-title">Name</h5>
+              <h5 class="card-title">[[Name]]</h5>
               <!-- stats -->
-              <p class="card-text">About/Stats</p>
+              <p class="card-text">[[About/Stats]]</p>
             </div>
           </div>        
         </div>
@@ -63,11 +71,11 @@
         <!-- Player 2 -->
         <div class="col">
           <div class="card" style="width: 75%;">
-            <img class="card-img-top" src="placeholder.png" alt="Card image cap">
+            <img class="card-img-top" src="/../static/placeholder.png" alt="Card image cap">
             <div class="card-body">
-              <h5 class="card-title">{{Name}}</h5>
+              <h5 class="card-title">[[Name]]</h5>
               <!-- stats -->              
-              <p class="card-text">{{About/Stats}}</p>
+              <p class="card-text">[[About/Stats]]</p>
             </div>
           </div>        
         </div>
@@ -80,30 +88,146 @@
     <!-- -----------user actions----------- -->
 
     <div class="container text-center border">
+      <!-- row 1 item from fake store-->
       <div class="row justify-content-md-center border">
+
+        <!-- col 1: directions telling user what the button does -->
         <div class="col-sm border">
-          <!-- col 1: directions telling user what the button does -->
-          Retrieve Item to give to {{insert name}}
+          Retrieve Item to give to [[insert name]]
+
         </div>
+        
+        <!-- col 2: button that does said action -->
         <div class="col-sm border">
-          <!-- col 2: button that does said action -->
-          <button type="submit" class="btn btn-info">Retrieve and give item</button>            
+          <form>
+            <input type="radio" id="item" name="item" value="item">
+            <label for="item" class="item-label">Retrieve and give item</label> <br>
+          </form>
+          <button id="item-button" class="btn btn-info" onclick='give_item()'>Confirm</button>
         </div>
 
+        <!-- col 3: display item after button is pressed, also the next column of actions is displayed-->        
+        <div class="col-sm border" id="display-item">
+          [[item name]]
+        </div>
+
+      </div>
+
+      <!-- row 2: yes or no-->
+      <div class="row justify-content-md-center border" id="display-section-2">
+
+        <!-- col 1: directions telling user what the button does -->
         <div class="col-sm border">
-          <!-- col 3: display item after button is pressed-->
-          
+          Find out [[name]]'s reaction to this gift!
+        </div>
+        
+        <!-- col 2: button that does said action -->
+        <div class="col-sm border">
+          <form>
+            <input type="radio" id="yes-no" name="yes-no" value="yes-no">
+            <label for="yes-no" class="yes-no-label"></label> See reaction<br>
+          </form>
+          <button id="yes-no-button" class="btn btn-info" onclick='display_yes_no()'>Confirm</button>
+        </div>
+
+        <!-- col 3: display reaction, if yes, can you put a nice message and if no, a bad message -->        
+        <div class="col-sm border" id="display-yes-no">
+          [[reaction]]
         </div>
 
       </div>
     </div>
 
+    <br><br>
 
+    <!-- OR ACCORDING STYLE -->
+    <div class="accordion" id="accordionPanelsStayOpenExample">
 
+      <!-- 1: item from fake store section-->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+          <!-- directions telling user what the button does -->
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+            Retrieve Item to give to [[insert name]]
+          </button>
+        </h2>
 
+        <!-- dropdown: -->
+        <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+          <div class="accordion-body">
+            <div class="container text-center border">
 
+              <!-- row -->
+              <div class="row justify-content-md-center border">              
+                <!-- col 1: button that does said action -->
+                <div class="col-sm border">
+                  <form>
+                    <input type="radio" id="item" name="item" value="item">
+                    <label for="item" class="item-label">Retrieve and give item</label> <br>
+                  </form>
+                  <button id="item-button" class="btn btn-info" onclick='give_item()'>Confirm</button>
+                </div>
+        
+                <!-- col 2: display item after button is pressed, also the next column of actions is displayed-->        
+                <div class="col-sm border" id="display-item">
+                  [[item name]]
+                </div>
+              </div>
 
-<!-- Sliding between stuff, cool feature -->
+          </div>
+        </div>
+      </div>
+
+      <!-- 2: yes or no section-->
+      <div class="accordion-item" id="display-section-2">
+        <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+          <!-- directions telling user what the button does -->
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+            Find out [[name]]'s reaction to this gift!
+          </button>
+        </h2>
+        
+        <!-- dropdown -->
+        <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
+          <div class="accordion-body">
+            <div class="container text-center border">
+
+              <!-- row -->
+              <div class="row justify-content-md-center border">
+                <!-- col 1: button that does said action -->
+                <div class="col-sm border">
+                  <form>
+                    <input type="radio" id="yes-no" name="yes-no" value="yes-no">
+                    <label for="yes-no" class="yes-no-label"></label> See reaction<br>
+                  </form>
+                  <button id="yes-no-button" class="btn btn-info" onclick='display_yes_no()'>Confirm</button>
+                </div>
+        
+                <!-- col 2: display reaction, if yes, can you put a nice message and if no, a bad message -->        
+                <div class="col-sm border" id="display-yes-no">
+                  [[reaction]]
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div> 
+
+    </div>
+
+    <br>
+
+    <!-- logout button -->
+    <div class="card" style="margin:auto;width: 18rem;">
+      <div class="card-body">
+        <form action = "/logout">
+          <button class="btn btn-primary">Logout</button>
+        </form>
+      </div>
+    </div>
+    
+    <!-- Sliding between stuff, cool feature -->
     <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
       <div class="carousel-indicators">
         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -147,61 +271,5 @@
 
 <br><br><br>
 
-
-
-    <div class="accordion" id="accordionPanelsStayOpenExample">
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="panelsStayOpen-headingOne">
-          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
-            BLANK BLANK BLANK
-          </button>
-        </h2>
-        <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
-          <div class="accordion-body">
-            <p>STUFF STUFF STUFF</p> 
-          </div>
-        </div>
-      </div>
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
-            CLICK CLICK CLICK
-          </button>
-        </h2>
-        <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
-          <div class="accordion-body">
-            MORE TEXT
-          </div>
-        </div>
-      </div> 
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="panelsStayOpen-headingThree">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
-            STUFF
-          </button>
-        </h2>
-        <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
-          <div class="accordion-body">
-            POPEYES
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <br>
-
-    <div class="card" style="margin:auto;width: 18rem;">
-      <img src="placeholder.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Text text text</h5>
-        <p class="card-text">TEXT TEXT TEXT</p>
-        <a href="www.google.com" class="btn btn-primary">Go somewhere</a>
-      </div>
-    </div>
-    
-    <form action = "/logout">
-      <button>Logout</button>
-    </form>
-    
   </body>
 </html>

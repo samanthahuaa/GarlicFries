@@ -40,10 +40,20 @@ gitaeP -- 2022-12-7 12:15
 * Finished the login/register 
 ==============================================================
 
-vivianT -- 2022-12-6 12:43
+vivianT -- 2022-12-7 12:43
 --------------------------------------------------------------
 * continued working on home.html, working on getting buttons to work for displaying stuff once a button is pushed fir retrieving item
 ==============================================================
+vivianT -- 2022-12-7 21:00
+--------------------------------------------------------------
+* Created grid of rows and cols to display the different sections of our storyline
+* Fake store/retrieving item section: user can now click a button to retrieve item and it'll appear; I used javascript to do that
+* Clicking the retrieving item button also allows the next section of the story to be displayed, and the user can click another button to see the NBA player's reaction (more javascript)
+* Created two different versions of how we might want to convey/display the storyline. 1st: rows and cols, 2nd: drop down menus that work similarly to the rows/cols, just looks a little diff. Will decide together which one we prefer.
+* Formatted the logout button better (in a card)
+* Moved placeholder image into static folder so we can now see it when running server.
+==============================================================
+
 
 template:
 name -- 2022-12-x xx:xx

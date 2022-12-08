@@ -1,0 +1,17 @@
+#display-item {
+    opacity: 0;
+}
+
+/* yes-no reaction section */
+#display-section-2 {
+    opacity: 0;
+}
+
+/* reaction itself*/
+#display-yes-no {
+    opacity: 0;
+}
+
+.center {
+    align-items: center;
+}
