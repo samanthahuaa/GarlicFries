@@ -18,4 +18,11 @@ You have to make an account to access the goodness inside our website. Once logg
 
 ## Launch codes:
 ### How to clone/install.
+ - Clone our repo
+     - HTTPS: `git clone https://github.com/samanthahuaa/GarlicFries.git`
+     - SSH: `git clone git@github.com:samanthahuaa/GarlicFries.git`
+ - In the command line, install flask by typing `pip3 install flask`
+ - In the command line, install all of the required packages `pip3 install -r requirements.txt`
 ### How to run.
+ - To launch our site, run `cd app` and `python3 __init__.py`
+ - To see our site, go to [http://127.0.0.1:5000](http://127.0.0.1:5000) in your web browser
