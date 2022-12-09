@@ -25,7 +25,7 @@ vivianT -- 2022-12-6 22:06
 * Edited __init__.py so app.run() and app.debug is included, wasn't running before
 ==============================================================
 
-saamnthaH -- 2022-12-7 01:25
+saamnthaH -- 2022-12-07 01:25
 --------------------------------------------------------------
 * added template to devlog
 * made edits to the design doc based on the feedback
@@ -35,16 +35,22 @@ saamnthaH -- 2022-12-7 01:25
     * considered adding more html pages / thought about how we want the previous stages of the site to be saved and viewed by the user.
 ==============================================================
 
-gitaeP -- 2022-12-7 12:15
+dianaA -- 2022-12-07 12:00
 --------------------------------------------------------------
-* Finished the login/register 
+* Worked on login and register
 ==============================================================
 
-vivianT -- 2022-12-7 12:43
+gitaeP -- 2022-12-7 12:15
+--------------------------------------------------------------
+* Finished the login/register
+==============================================================
+
+vivianT -- 2022-12-07 12:43
 --------------------------------------------------------------
 * continued working on home.html, working on getting buttons to work for displaying stuff once a button is pushed fir retrieving item
 ==============================================================
-vivianT -- 2022-12-7 21:00
+
+vivianT -- 2022-12-07 21:00
 --------------------------------------------------------------
 * Created grid of rows and cols to display the different sections of our storyline
 * Fake store/retrieving item section: user can now click a button to retrieve item and it'll appear; I used javascript to do that
@@ -59,6 +65,18 @@ vivianT -- 2022-12-8 13:19
 * Got rid of the grid format and sticking with the dropdown format.
 ==============================================================
 
+dianaA -- 2022-12-08 13:00
+--------------------------------------------------------------
+* Fixed formatting on the login/register pages and added more buttons
+==============================================================
+
+samanthaH -- 2022-12-08 13:00
+--------------------------------------------------------------
+* Updated group on API issues and as a group, we made decisions about what type of info we wanted to include in our site from the API
+* removed the NFL API from our plan because it's broken. replaced with sunset sunrise API
+* With the help of dianaA, we updated the design doc with the new API plan
+* worked on incorporating today's date into our sunset/sunrise algo
+==============================================================
 
 template:
 name -- 2022-12-x xx:xx
