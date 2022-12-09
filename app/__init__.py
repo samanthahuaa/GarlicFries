@@ -1,9 +1,10 @@
 import sqlite3
-
+from refresh import *
+from api_calls import *
+from user_db import *
 from flask import Flask, redirect, render_template, request, session, url_for
 
 # sqlite
-
 DB_FILE = "tables.db"
 db = sqlite3.connect(DB_FILE, check_same_thread=False)
 c = db.cursor()
@@ -24,7 +25,7 @@ def index():
     else:
         return render_template('login.html')
 
-@app.route('/auth', methods=['GET', 'POST'])
+@app.route('/home', methods=['GET', 'POST'])
 def authenticate():
     username = request.form['username']
     password = request.form['password']
@@ -41,6 +42,7 @@ def authenticate():
 
     return render_template('login.html', login="Submitted username is not registered!")
 
+########################### LOGGING IN SYSTEM ###########################
 @app.route("/register")
 def register():
     return render_template('createaccount.html')

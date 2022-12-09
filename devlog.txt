@@ -59,15 +59,17 @@ vivianT -- 2022-12-07 21:00
 * Formatted the logout button better (in a card)
 * Moved placeholder image into static folder so we can now see it when running server.
 ==============================================================
-vivianT -- 2022-12-8 13:19
+
+samanthaH -- 2022-12-08 00:50
 --------------------------------------------------------------
-* Made two more sections of our storyline: love calculating (seeing compatability) and scheduling date. 
-* Got rid of the grid format and sticking with the dropdown format.
+* Consulted API documentation and kb to create our python code to access the API data
+* Realized the NFL API is broken. Updated API card
 ==============================================================
 
 dianaA -- 2022-12-08 13:00
 --------------------------------------------------------------
 * Fixed formatting on the login/register pages and added more buttons
+* Changed the NFL API to the Sunset/Sunrise API and worked on incorporating it into the code
 ==============================================================
 
 samanthaH -- 2022-12-08 13:00
@@ -77,12 +79,39 @@ samanthaH -- 2022-12-08 13:00
 * With the help of dianaA, we updated the design doc with the new API plan
 * worked on incorporating today's date into our sunset/sunrise algo
 ==============================================================
+
+vivianT -- 2022-12-8 13:19
+--------------------------------------------------------------
+* Made two more sections of our storyline: love calculating (seeing compatability) and scheduling date. 
+* Got rid of the grid format and sticking with the dropdown format.
+==============================================================
+
 vivianT -- 2022-12-8 22:50
 --------------------------------------------------------------
 * Made a summary section that summarizes the results of the love story (item, compatability, and date location, if there is one) using slides (bootstrap carousel) the user can go through with buttons.
 * Changed the displaying all new parts of the storyline mechanism by changing display property instead of opacity property because the user would still be able to click through dropdowns and use features if we use opacity, they just wouldn't be able to see them. Display, however, completely get rids of elements.
 * Changed a bunch of colors and features like making stuff have rounded corners.
 ==============================================================
+
+gitaeP, vivianT -- 2022-12-09 13:17
+--------------------------------------------------------------
+* Styled login page more:
+  - Centered all the content
+  - Changed background color
+  - Refurbished buttons
+  - Put username and password text in their respective box (floating)
+  - Added a heart NBA logo/image 
+==============================================================
+
+dianaA, samanthaH -- 2022-12-09 13:17
+--------------------------------------------------------------
+* Added new files (api_calls.py, refresh.py)
+* Removed user_db.py because we realized it complicated processes that didn't need to be complicated
+* Put the API python into the repo
+* Clarified vision of project with teammates
+* Worked on weaving together the other Python files with __init__.py
+==============================================================
+
 template:
 name -- 2022-12-x xx:xx
 --------------------------------------------------------------

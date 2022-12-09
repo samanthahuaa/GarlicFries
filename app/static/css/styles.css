@@ -1,5 +1,6 @@
 body {
     background-color: #c5e1fa;
+    /* #fee8d1 */
 }
 #display-item {
     display: none;
@@ -43,7 +44,17 @@ body {
     text-align: center;
     background-color: #b9c4ed;
     border-radius: 15px;
+}
 
+#login {
+    align-items: center;
+    text-align: center;
+    background-color: #90bae8;
+}
+
+#teamname {
+    align-items: center;
+    text-align: center;
 }
 
 .center {
