@@ -1,33 +1,50 @@
+body {
+    background-color: #c5e1fa;
+}
 #display-item {
-    opacity: 0;
+    display: none;
 }
 
 /* yes-no reaction section */
 #display-section-2 {
-    opacity: 0;
+    display: none;
 }
 
 /* yes-no section: reaction itself*/
 #display-yes-no {
-    opacity: 0;
+    display: none;
 }
 
 /* love-calc section */
 #display-section-3 {
-    opacity: 0;
+    display: none;
 }
 
 /* show compatability itself*/
 #display-love-calc {
-    opacity: 0;
+    display: none;
 }
 
 /* love-calc section */
 #display-section-4 {
-    opacity: 0;
+    display: none;
 }
 
+.accordion-collapse{
+    background-color: #b9c4ed;
+}
 
+#date {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#summary {
+    text-align: center;
+    background-color: #b9c4ed;
+    border-radius: 15px;
+
+}
 
 .center {
     align-items: center;

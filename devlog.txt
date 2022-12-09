@@ -77,7 +77,12 @@ samanthaH -- 2022-12-08 13:00
 * With the help of dianaA, we updated the design doc with the new API plan
 * worked on incorporating today's date into our sunset/sunrise algo
 ==============================================================
-
+vivianT -- 2022-12-8 22:50
+--------------------------------------------------------------
+* Made a summary section that summarizes the results of the love story (item, compatability, and date location, if there is one) using slides (bootstrap carousel) the user can go through with buttons.
+* Changed the displaying all new parts of the storyline mechanism by changing display property instead of opacity property because the user would still be able to click through dropdowns and use features if we use opacity, they just wouldn't be able to see them. Display, however, completely get rids of elements.
+* Changed a bunch of colors and features like making stuff have rounded corners.
+==============================================================
 template:
 name -- 2022-12-x xx:xx
 --------------------------------------------------------------
