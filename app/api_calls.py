@@ -4,13 +4,14 @@ from datetime import datetime, timedelta
 import requests
 import random
 import json
+
 app = Flask(__name__)
 
 # LOVE CALC
 def calculate_love(fname, sname, result):
     key = ""
     with open("keys/key_love_calculator.txt", "r") as f:
-        key = f.read() 
+        key = f.read()
     url = "https://love-calculator.p.rapidapi.com/getPercentage"
     querystring = {"fname":fname, "sname":sname}
     headers = {
@@ -18,8 +19,8 @@ def calculate_love(fname, sname, result):
         "X-RapidAPI-Host": "love-calculator.p.rapidapi.com"
     }
     data = requests.get(url, headers=headers, params=querystring) #gets data from the website
-    
-    if result == True:
+
+    if result == "yes":
         multiplier = 1.2
     else:
         multiplier = 0.8
@@ -28,6 +29,7 @@ def calculate_love(fname, sname, result):
     text_result = json.loads(data.text)["result"]
 
     return [percentage, text_result]
+    ############################ do we even need the text_result?
     # render_template("main.html", url=url, e=explanation)
 
 # print(calculate_love("John", "Alice", False))
@@ -42,12 +44,14 @@ def sunset_sunrise():
     else:
         sun = "sunrise"
     days = random.randint(7,14)
-    date = datetime.now() + timedelta(days)
+    date = str(datetime.now() + timedelta(days))
+    # date looks like this 2022-12-22 17:06:16.372884 so we need to truncate it
+    date = date[:10]
     url = f"https://api.sunrise-sunset.org/json?date={date}&lat=40.7699&long=-73.9753" # lat long is for the central park carousel
     data = requests.get(url) #gets data from the website
     # percentage = json.loads(data.text)["percentage"] #data.text turns data into a string, json.loads converts json string to dictionary
     time = json.loads(data.text)["results"][sun]
-    return time
+    return [date, time]
 
 # print(sunset_sunrise())
 
@@ -57,6 +61,11 @@ def yes_no():
     data = requests.get(url) #gets data from the website
     answer = json.loads(data.text)["answer"] #data.text turns data into a string, json.loads converts json string to dictionary
     image = json.loads(data.text)["image"]
+
+    if answer == "no":
+        answer = "Uh oh, the gift was not well received..."
+    else:
+        answer = "LETS GOOOOOOOO. The gift was well received!"
     return [answer, image]
 
 # print(yes_no())

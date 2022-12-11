@@ -82,7 +82,7 @@ samanthaH -- 2022-12-08 13:00
 
 vivianT -- 2022-12-8 13:19
 --------------------------------------------------------------
-* Made two more sections of our storyline: love calculating (seeing compatability) and scheduling date. 
+* Made two more sections of our storyline: love calculating (seeing compatability) and scheduling date.
 * Got rid of the grid format and sticking with the dropdown format.
 ==============================================================
 
@@ -100,7 +100,7 @@ gitaeP, vivianT -- 2022-12-09 13:17
   - Changed background color
   - Refurbished buttons
   - Put username and password text in their respective box (floating)
-  - Added a heart NBA logo/image 
+  - Added a heart NBA logo/image
 ==============================================================
 
 dianaA, samanthaH -- 2022-12-09 13:17
@@ -110,6 +110,13 @@ dianaA, samanthaH -- 2022-12-09 13:17
 * Put the API python into the repo
 * Clarified vision of project with teammates
 * Worked on weaving together the other Python files with __init__.py
+==============================================================
+
+samanthaH -- 2022-12-11 05:20
+--------------------------------------------------------------
+* updated home.html to include the different parts the python file will pass in
+* rendered the home template in __init__.py
+* fixed the sunrise_sunset() function
 ==============================================================
 
 template:

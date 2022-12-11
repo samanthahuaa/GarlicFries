@@ -9,13 +9,13 @@ app = Flask(__name__)
 
 # NBA PLAYER STATS
 # WARNING: Not all players will have height_feet, height_inches, or weight_pounds. --> very few do
-@app.route("/")
 def player_stats():
     player_id = random.randint(1,3092) # the api only has 3092 products. the exact number is important for the link (the first item is 1)
     url = f"https://www.balldontlie.io/api/v1/players/{player_id}"
     data = requests.get(url) #gets data from the website
     fname = json.loads(data.text)["first_name"] # data.text turns data into a string, json.loads converts json string to dictionary
     lname = json.loads(data.text)["last_name"]
+    name = fname + " " + lname
     position = json.loads(data.text)["position"] # not all players have position either
     if len(position) == 0:
         position = "Position of player is not available"
@@ -23,10 +23,9 @@ def player_stats():
 
     avg_games_played = player_stats_helper(player_id)
     # average_games_played = player_stats_helper(player_id)
-    return [fname, lname, position, teamname, avg_games_played]
+    return [name, position, teamname, avg_games_played]
 
 # average games played per season
-@app.route("/")
 def player_stats_helper(id): # want id to be an argument so that we can use this for a specific player
     res = requests.get(f"https://www.balldontlie.io/api/v1/season_averages?player_ids[]={id}")
     res = res.json()

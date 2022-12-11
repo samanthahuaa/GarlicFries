@@ -1,7 +1,7 @@
 import sqlite3
 from refresh import *
 from api_calls import *
-from user_db import *
+# from user_db import *
 from flask import Flask, redirect, render_template, request, session, url_for
 
 # sqlite
@@ -36,7 +36,13 @@ def authenticate():
     for user in user_logins:
         if username == user[0] and password == user[1]:
             session['username'] = username
-            return render_template('home.html', status="Successfully logged in!")
+            player1 = player_stats()
+            player2 = player_stats()
+            full_item = get_item()
+            reaction = yes_no()
+            calculator = calculate_love(player1[0], player2[0], reaction[0])
+            outing = sunset_sunrise()
+            return render_template('home.html', status="Successfully logged in!", name1=player1[0], position=player1[1], teamname=player1[2], avg_games_played=player1[3], name2=player2[0], position2=player2[1], teamname2=player2[2], avg_games_played2=player2[3], item_name=full_item[0], item_price=full_item[1], item_description=full_item[2], item_link=full_item[3], answer=reaction[0], answer_link=reaction[1], percentage=calculator[0], date=outing[0], time=outing[1])
         if username == user[0] and password != user[1]:
             return render_template('login.html', login="Invalid Password!")
 
