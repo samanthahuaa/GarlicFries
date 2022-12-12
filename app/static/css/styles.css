@@ -54,6 +54,12 @@ body {
     margin-top: 60px;
 }
 
+.homepage {
+    margin-top: 60px;
+    margin-left: 60px;
+    margin-right: 60px;
+}
+
 .pink {
     align-items: center;
     text-align: center;
@@ -75,7 +81,7 @@ body {
 }
 
 #logo {
-    width: 15%;
+    width: 20%;
 }
 
 input {
