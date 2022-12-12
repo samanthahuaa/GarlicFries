@@ -43,6 +43,10 @@ function give_item() {
         // display the next step of the storyline, date schedule
         var correct = document.getElementById('display-section-4')
         correct.style.display = "inline";
+
+        //display summary
+        var correct = document.getElementById('display-summary')
+        correct.style.display = "inline";        
     }
     else {
         var correct = document.getElementById('display-love-calc')

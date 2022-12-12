@@ -28,37 +28,42 @@ time spent:  hrs -->
 
   <br>
 
-  <img src"https://cdn.dribbble.com/users/27903/screenshots/4654407/media/b8147ad14bb3bdde5cb0ca3d257c84b3.png">
+  <!-- logo/image   -->
+  <img src="https://cdn.dribbble.com/users/27903/screenshots/4654407/media/b8147ad14bb3bdde5cb0ca3d257c84b3.png" id="logo" class="center">
+  <br>
 
   <!-- login -->
-  <div id="login">
+  <div id="login"> <br>
     <form action= "/home" method = "POST">
       <!-- username -->
       <div class="form-floating">
         <h3>
-            <input type="text" name="username">
-            <label for="floatingInput">Username</label>
+            <input type="text" name="username" placeholder="username">
+            <!-- <label for="floatingInput">Username</label> -->
         </h3>
       </div>
 
       <!-- password -->
       <div class="form-floating">
         <h3>
-            <input type="password" name="password">
-            <label for="floatingInput">Password</label>
+            <input type="password" name="password" placeholder="password">
+            <!-- <label for="floatingInput">Password</label> -->
         </h3>
       </div>
 
       <!-- submit button -->
       <h5>
-        <input type="submit" class="btn btn-primary" name="sub1">
+        <input type="submit" class="btn btn-primary sign btn-block mb-4" name="sub1">
       </h5>
     {{login}}
     </form>
 
+    <!-- register button -->
     <form action = "/register">
-      <button class="btn btn-info">Register</button>
+      <button class="btn btn-primary register">Register</button>
     </form>
+
+    <br>
 
   </div>
 

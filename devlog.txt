@@ -119,6 +119,13 @@ samanthaH -- 2022-12-11 05:20
 * fixed the sunrise_sunset() function
 ==============================================================
 
+vivianT -- 2022-12-11 21:24
+--------------------------------------------------------------
+* Reformatted the login page: colors, text color, the username and pw fields, buttons, spacing
+* Made it so that you can only see summary of love story after going through last step in the home page
+* Reformatted home page: colors, text color, buttons
+==============================================================
+
 template:
 name -- 2022-12-x xx:xx
 --------------------------------------------------------------

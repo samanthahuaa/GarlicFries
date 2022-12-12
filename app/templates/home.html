@@ -95,7 +95,7 @@ time spent:  hrs -->
         <h2 class="accordion-header" id="panelsStayOpen-headingOne">
           <!-- directions telling user what the button does -->
           <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
-            Retrieve Item to give to {{name2}}
+            Retrieve item to give to {{name2}}
           </button>
         </h2>
 
@@ -112,7 +112,7 @@ time spent:  hrs -->
                     <input type="radio" id="item" name="item" value="item">
                     <label for="item" class="item-label">Retrieve and give item</label> <br>
                   </form>
-                  <button id="item-button" class="btn btn-info" onclick='give_item()'>Confirm</button>
+                  <button id="item-button" class="btn btn-primary sign" onclick='give_item()'>Confirm</button>
                 </div>
 
                 <!-- col 2: display item after button is pressed, also the next column of actions is displayed-->
@@ -121,7 +121,7 @@ time spent:  hrs -->
                   {{item_price}} <br>
                   {{item_description}} <br>
                   <!-- image placeholder, replace later -->
-                  <img src={{item_link}}>
+                  <img src={{item_link}} class="item-img">
                 </div>
               </div>
 
@@ -152,7 +152,7 @@ time spent:  hrs -->
                     <input type="radio" id="yes-no" name="yes-no" value="yes-no">
                     <label for="yes-no" class="yes-no-label"></label> See reaction<br>
                   </form>
-                  <button id="yes-no-button" class="btn btn-info" onclick='display_yes_no()'>Confirm</button>
+                  <button id="yes-no-button" class="btn btn-primary sign" onclick='display_yes_no()'>Confirm</button>
                 </div>
 
                 <!-- col 2: display reaction, if yes, can you put a nice message and if no, a bad message -->
@@ -189,12 +189,12 @@ time spent:  hrs -->
                   <input type="radio" id="love-calc" name="love-calc" value="love-calc">
                   <label for="love-calc" class="love-calc-label"></label> See compatability<br>
                 </form>
-                <button id="love-calc-button" class="btn btn-info" onclick='display_love_calc()'>Confirm</button>
+                <button id="love-calc-button" class="btn btn-primary sign" onclick='display_love_calc()'>Confirm</button>
               </div>
 
               <!-- col 2: display reaction, if yes, can you put a nice message and if no, a bad message -->
               <div class="col-sm border" id="display-love-calc">
-                {{percentage}}
+                {{percentage}}%
                 <!-- we can put condition using jinja code: depending on percentage, we can display a message -->
               </div>
             </div>
@@ -242,70 +242,79 @@ time spent:  hrs -->
 <hr>
 
  <!-- SUMMARY OF RESULTS, sliding feature -->
-  <div class="container">
-    <div id="summary" class="row justify-content-center border">
-      <h2>Summary of Love Story</h2>
-    </div>
-  </div>
-
- <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-  </div>
-  <div class="carousel-inner">
-
-    <!-- item slide -->
-    <div class="carousel-item active">
-      <img src="../static/placeholder.png" class="d-block mx-auto" alt="...">
-      <div class="captionheh">
-        <p style="text-align: center;">Item!</p>
+ <div id="display-summary">
+    <div class="container">
+      <div id="summary" class="row justify-content-center border">
+        <h2>Summary of Love Story</h2>
       </div>
     </div>
+    
+    <br>
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
 
-    <!-- compatability slide -->
-    <div class="carousel-item">
-      <div class="card" style="margin:auto;width: 18rem;">
-        <div class="card-body">
-            [[Percentage, compatability]]
+        <!-- item slide -->
+        <div class="carousel-item active">
+          <img src={{item_link}} class="d-block mx-auto item-img" alt="...">
+          <div class="captionheh">
+            <p style="text-align: center;">{{item_name}}!</p>
+          </div>
         </div>
-    </div>
 
-      <div class = "captionheh">
-        <br>
-        <p style="text-align: center;">compatability</p>
-      </div>
-    </div>
+        <!-- compatability slide -->
+        <div class="carousel-item">
+          <div class="card" style="margin:auto;width: 18rem;">
+            <div class="card-body">
+              {{percentage}}%
+            </div>
+        </div>
 
-    <div class="carousel-item">
-      <!-- picture of sunset -->
-      <img src="../static/placeholder.png" class="d-block mx-auto" alt="...">
-      <div class = "captionheh">
-        <p style="text-align: center;">Date!</p>
+          <div class = "captionheh">
+            <br>
+            <p style="text-align: center;">compatability</p>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <!-- picture of sunset -->
+          <img src="../static/placeholder.png" class="d-block mx-auto" alt="...">
+          <div class = "captionheh">
+            <p style="text-align: center;">            
+              {{name1}} and {{name2}} will have their first date! <br>
+              Location: Central Park <br>
+              Date: {{date}} <br>
+              Time: {{time}} <br>
+            </p>
+          </div>
+        </div>
       </div>
+
+      <br>
+
+      <!-- buttons to control slides -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
     </div>
   </div>
 
-  <br>
-
-  <!-- buttons to control slides -->
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
     <br>
 
     <!-- logout button -->
     <div class="card" style="margin:auto;width: 18rem;">
       <div class="card-body">
         <form action = "/logout">
-          <button class="btn btn-primary">Logout</button>
+          <button class="btn btn-primary register">Logout</button>
         </form>
       </div>
     </div>
