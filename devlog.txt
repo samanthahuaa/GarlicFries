@@ -126,6 +126,13 @@ vivianT -- 2022-12-11 21:24
 * Reformatted home page: colors, text color, buttons
 ==============================================================
 
+dianaA, gitaeP, vivianT -- 2022-12-12 13:18
+--------------------------------------------------------------
+* Working on displaying date yes versus date no: all the text and image is different, so depending on the compatability, we display certain information over other info
+* 
+==============================================================
+
+
 template:
 name -- 2022-12-x xx:xx
 --------------------------------------------------------------

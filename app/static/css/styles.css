@@ -112,3 +112,7 @@ input {
     margin-right: auto;
     display: block;
 }
+
+#image_date {
+    width: 50%;
+}

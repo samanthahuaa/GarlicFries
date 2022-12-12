@@ -51,7 +51,15 @@ def sunset_sunrise():
     data = requests.get(url) #gets data from the website
     # percentage = json.loads(data.text)["percentage"] #data.text turns data into a string, json.loads converts json string to dictionary
     time = json.loads(data.text)["results"][sun]
-    return [date, time]
+    img_date = ""
+    
+    if "PM" in time:
+        time = "Sunset"
+        img_date = "https://secretnyc.co/wp-content/uploads/2022/03/New-Project-9.png"
+    else:
+        time = "Sunrise"
+        img_date = "https://media.timeout.com/images/101886667/750/422/image.jpg"
+    return [date, time, img_date]
 
 # print(sunset_sunrise())
 
@@ -83,6 +91,7 @@ def get_item():
     return [title, price, description, image]
 
 # print(get_item())
+    
 
 if __name__ == "__main__":
     app.debug = True
