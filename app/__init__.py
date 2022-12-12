@@ -49,7 +49,7 @@ def authenticate():
             full_item = get_item()
             reaction = yes_no()
             calculator = calculate_love(player1[0], player2[0], reaction[0])
-            if calculator[0] >= 50:
+            if calculator[0] >= 75:
                 outing = sunset_sunrise()
                 names = str(player1[0]) + " and " + str(player1[2]) + " will have their first date!"
                 loc = "Location: Central Park"
@@ -57,7 +57,7 @@ def authenticate():
                 tim = "Time: " + str(outing[1])
                 img = outing[2]
             else:
-                names = ""
+                names = "Sadly, there will be no first date between " + str(player1[0]) + " and " + str(player1[2]) + ". Better luck next time."
                 loc = ""
                 dat = ""
                 tim = ""
