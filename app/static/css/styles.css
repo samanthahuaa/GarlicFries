@@ -50,13 +50,26 @@ body {
     border-radius: 15px;
 }
 
-#login {
+.page {
+    margin-top: 60px;
+}
+
+.pink {
     align-items: center;
     text-align: center;
     background-color: #fcbab6;
 }
 
+::placeholder {
+    font-size: 1em;
+}
+
 #teamname {
+    align-items: center;
+    text-align: center;
+}
+
+#loginscreen {
     align-items: center;
     text-align: center;
 }

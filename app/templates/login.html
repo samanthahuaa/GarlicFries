@@ -15,8 +15,8 @@ time spent:  hrs -->
     <link href="../static/css/styles.css" rel="stylesheet">
   </head>
 
-  <body>
-    <div id="teamname">
+  <body class="page">
+    <div id="loginscreen">
       <h1>
         Garlic Fries' Steamy NBA Love Login Page
       </h1>
@@ -27,29 +27,25 @@ time spent:  hrs -->
     </div>
 
   <br>
-
-  <!-- logo/image   -->
+  <!-- logo/image -->
   <img src="https://cdn.dribbble.com/users/27903/screenshots/4654407/media/b8147ad14bb3bdde5cb0ca3d257c84b3.png" id="logo" class="center">
   <br>
 
   <!-- login -->
-  <div id="login"> <br>
-    <form action= "/home" method = "POST">
-      <!-- username -->
-      <div class="form-floating">
+  <div class="pink">
+    <br>
+    <form action= "/home" method="POST">
+        <!-- username -->
         <h3>
-            <input type="text" name="username" placeholder="username">
-            <!-- <label for="floatingInput">Username</label> -->
+          Username:
+            <input type="text" name="username" placeholder="begin typing...">
         </h3>
-      </div>
-
-      <!-- password -->
-      <div class="form-floating">
+        <!-- password -->
         <h3>
-            <input type="password" name="password" placeholder="password">
-            <!-- <label for="floatingInput">Password</label> -->
+          Password:
+            <input type="password" name="password" placeholder="begin typing...">
         </h3>
-      </div>
+      <br>
 
       <!-- submit button -->
       <h5>
@@ -62,13 +58,10 @@ time spent:  hrs -->
     <form action = "/register">
       <button class="btn btn-primary register">Register</button>
     </form>
-
     <br>
 
   </div>
+  <br>
 
-    <br>
-
-  </br>
   </body>
 </html>
