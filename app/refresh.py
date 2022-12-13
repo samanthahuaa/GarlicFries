@@ -23,7 +23,7 @@ def player_stats():
         position = "Position: " + position
     teamname = "Team Name: " + str(json.loads(data.text)["team"]["name"])
 
-    avg_games_played = "Average Games Played: " + player_stats_helper(player_id)
+    avg_games_played = "Average Games Played: " + str(player_stats_helper(player_id))
     # average_games_played = player_stats_helper(player_id)
     return [name, position, teamname, avg_games_played]
 

@@ -144,6 +144,13 @@ dianaA -- 2022-12-12 21:25
 * Clarified position, team name, and average games played on the player cards
 ==============================================================
 
+vivianT -- 2022-12-12 22:10
+--------------------------------------------------------------
+* Fixed the file name when linking to style sheet in all the html files
+* The wrong variable in __init__.py was indexed, so instead of player2's name, it was player1's team name. Fixed that so it now gives the html file player2's name.
+* Fixed this error that occasionally happens when the NBA api actually has a number for average games played. The function player_stats_helper(id) would return an int when that happens, and we concatenate that with a string in player_stats() which gave an error. Fixed it by typecasting whatever is returned from player_stats_helper(id) to be a string.
+* Minor CSS: giving cards a background color
+==============================================================
 
 template:
 name -- 2022-12-x xx:xx

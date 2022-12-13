@@ -57,7 +57,7 @@ def authenticate():
                 tim = "Time: " + str(outing[1])
                 img = outing[2]
             else:
-                names = "Sadly, there will be no first date between " + str(player1[0]) + " and " + str(player1[2]) + ". Better luck next time."
+                names = "Sadly, there will be no first date between " + str(player1[0]) + " and " + str(player2[0]) + ". Better luck next time."
                 loc = ""
                 dat = ""
                 tim = ""

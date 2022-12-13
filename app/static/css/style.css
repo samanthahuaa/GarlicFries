@@ -120,3 +120,12 @@ input {
 #carousel_image {
     width: 50%;
 }
+
+.card-body {
+    background-color: #ffd6d6;
+}
+
+.accordion-header .accordion-item {
+    background-color: #ffd6d6;
+    color: #662f2c;
+}
