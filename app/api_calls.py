@@ -12,12 +12,24 @@ def calculate_love(fname, sname, result):
     key = ""
     with open("keys/key_love_calculator.txt", "r") as f:
         key = f.read()
+
+    # if key is empty, return our standard percent
+    if key == "":
+        return 50
+    
     url = "https://love-calculator.p.rapidapi.com/getPercentage"
     querystring = {"fname":fname, "sname":sname}
     headers = {
         "X-RapidAPI-Key": key,
         "X-RapidAPI-Host": "love-calculator.p.rapidapi.com"
     }
+
+    # if key is broken, return our standard percent
+    try:
+        data = requests.get(url, headers=headers, params=querystring) #gets data from the website
+    except:
+        return 50
+
     data = requests.get(url, headers=headers, params=querystring) #gets data from the website
 
     if result == "yes":
@@ -26,9 +38,9 @@ def calculate_love(fname, sname, result):
         multiplier = 0.8
 
     percentage = float(json.loads(data.text)["percentage"]) * multiplier #data.text turns data into a string, json.loads converts json string to dictionary
-    text_result = json.loads(data.text)["result"]
+    percentage = round(percentage, 2)
 
-    return [percentage, text_result]
+    return percentage
     ############################ do we even need the text_result?
     # render_template("main.html", url=url, e=explanation)
 

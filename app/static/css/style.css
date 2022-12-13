@@ -133,3 +133,18 @@ input {
     background-color: #ffd6d6;
     color: #662f2c;
 }
+
+.carousel-control-prev-icon {
+    background-color: #000000;
+    border-radius: 25px;
+}
+
+.carousel-control-next-icon {
+    background-color: #000000;
+    border-radius: 25px;
+}
+
+.carousel-indicators {
+    background-color: #000000;
+    border-radius: 25px;
+}
