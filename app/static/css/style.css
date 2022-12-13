@@ -117,7 +117,11 @@ input {
     width: 50%;
 }
 
-#carousel_image {
+#carousel_image1 {
+    width: 30%;
+}
+
+#carousel_image2 {
     width: 50%;
 }
 
