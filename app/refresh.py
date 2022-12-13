@@ -18,10 +18,12 @@ def player_stats():
     name = fname + " " + lname
     position = json.loads(data.text)["position"] # not all players have position either
     if len(position) == 0:
-        position = "Position of player is not available"
-    teamname = json.loads(data.text)["team"]["name"]
+        position = "Position: Not available"
+    else:
+        position = "Position: " + position
+    teamname = "Team Name: " + str(json.loads(data.text)["team"]["name"])
 
-    avg_games_played = player_stats_helper(player_id)
+    avg_games_played = "Average Games Played: " + player_stats_helper(player_id)
     # average_games_played = player_stats_helper(player_id)
     return [name, position, teamname, avg_games_played]
 
