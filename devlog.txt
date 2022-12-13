@@ -126,10 +126,22 @@ vivianT -- 2022-12-11 21:24
 * Reformatted home page: colors, text color, buttons
 ==============================================================
 
+dianaA -- 2022-12-12 01:38
+--------------------------------------------------------------
+* Worked on login and home page fomatting
+* Made formatting consistent between pages
+==============================================================
+
 dianaA, gitaeP, vivianT -- 2022-12-12 13:18
 --------------------------------------------------------------
 * Working on displaying date yes versus date no: all the text and image is different, so depending on the compatability, we display certain information over other info
-* 
+==============================================================
+
+dianaA -- 2022-12-12 21:25
+--------------------------------------------------------------
+* Fixed the issue where both the outcome for a scheduled first date and a failed first date would appear, so only one appears
+* Changed home page formatting to make the website more readable
+* Clarified position, team name, and average games played on the player cards
 ==============================================================
 
 
