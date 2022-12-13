@@ -97,7 +97,7 @@ time spent:  hrs -->
         <h2 class="accordion-header" id="panelsStayOpen-headingOne">
           <!-- directions telling user what the button does -->
           <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
-            <br><h5>Retrieve item to give to {{name2}}</h5>
+            <br><h5>Retrieve an item to give to {{name2}}!</h5>
           </button>
         </h2>
 
@@ -113,7 +113,7 @@ time spent:  hrs -->
                   <form>
                     <br>
                     <input type="radio" id="item" name="item" value="item">
-                    <label for="item" class="item-label">Retrieve and give item</label> <br>
+                    <label for="item" class="item-label">Retrieve and give the item!</label> <br>
                   </form>
                   <br>
                   <button id="item-button" class="btn btn-primary sign" onclick='give_item()'>Confirm</button> <br><br>
@@ -121,7 +121,7 @@ time spent:  hrs -->
 
                 <!-- col 2: display item after button is pressed, also the next column of actions is displayed-->
                 <div class="col-sm" id="display-item">
-                  <br> Name: {{item_name}} <br><br>
+                  <br> <b>Name: {{item_name}}</b> <br><br>
                   Price: ${{item_price}} <br><br>
                   Description: {{item_description}} <br><br>
                   <!-- image placeholder, replace later -->
@@ -155,14 +155,14 @@ time spent:  hrs -->
                   <form>
                     <br>
                     <input type="radio" id="yes-no" name="yes-no" value="yes-no">
-                    <label for="yes-no" class="yes-no-label"></label> See reaction <br><br>
+                    <label for="yes-no" class="yes-no-label"></label>See reaction!<br><br>
                   </form>
                   <button id="yes-no-button" class="btn btn-primary sign" onclick='display_yes_no()'>Confirm</button> <br><br>
                 </div>
 
                 <!-- col 2: display reaction, if yes, can you put a nice message and if no, a bad message -->
                 <div class="col-sm" id="display-yes-no"><br>
-                  {{answer}}<br><br>
+                  <b>{{answer}}</b><br><br>
                   <img src={{answer_link}}> <br><br>
                 </div>
               </div>
@@ -193,14 +193,14 @@ time spent:  hrs -->
                 <form>
                   <br>
                   <input type="radio" id="love-calc" name="love-calc" value="love-calc">
-                  <label for="love-calc" class="love-calc-label"></label> See compatability <br><br>
+                  <label for="love-calc" class="love-calc-label"></label>See compatability!<br><br>
                 </form>
                 <button id="love-calc-button" class="btn btn-primary sign" onclick='display_love_calc()'>Confirm</button> <br><br>
               </div>
 
               <!-- col 2: display reaction, if yes, can you put a nice message and if no, a bad message -->
               <div class="col-sm" id="display-love-calc">
-                <br>{{percentage}}%
+                <br><br><b>{{percentage}}%</b>
                 <!-- we can put condition using jinja code: depending on percentage, we can display a message -->
               </div>
             </div>
@@ -228,7 +228,7 @@ time spent:  hrs -->
           <div class="col-sm">
             <center>
             <!-- yes date condition: -->
-            <br>{{name_date}} <br>
+            <br><b>{{name_date}}</b><br>
             {{location}} <br>
             {{date}} <br>
             {{time}} <br><br>
@@ -247,8 +247,8 @@ time spent:  hrs -->
  <!-- SUMMARY OF RESULTS, sliding feature -->
  <div id="display-summary">
     <div class="container">
-      <div id="summary" class="row justify-content-center">
-        <h2>Summary of Love Story</h2>
+      <div id="summary" id="carousel_image" class="row justify-content-center">
+        <br><h2>Summary of Love Story</h2><br>
       </div>
     </div>
     
@@ -274,7 +274,7 @@ time spent:  hrs -->
         <div class="carousel-item">
           <div class="card" style="margin:auto;width: 18rem;">
             <div class="card-body">
-              {{percentage}}%
+              <center>{{percentage}}%</center>
             </div>
           </div>
 
