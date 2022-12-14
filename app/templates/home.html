@@ -45,6 +45,10 @@ time spent:  hrs -->
       new bootstrap.Popover(document.getElementById('popoverButton'))
     </script>
 
+    <div class="progress">
+      <div class="progress-bar" role="progressbar" aria-label="data" style="width: 24%" aria-valuemin="0" aria-valuemax="100"> {{done}}/100 </div>
+    </div>
+
     <br>
 
     <hr>
@@ -110,13 +114,8 @@ time spent:  hrs -->
               <div class="row justify-content-md-center">
                 <!-- col 1: button that does said action -->
                 <div class="col-sm">
-                  <form>
-                    <br>
-                    <input type="radio" id="item" name="item" value="item">
-                    <label for="item" class="item-label">Retrieve and give the item!</label> <br>
-                  </form>
                   <br>
-                  <button id="item-button" class="btn btn-primary sign" onclick='give_item()'>Confirm</button> <br><br>
+                  <button id="item-button" class="btn btn-primary sign" onclick='give_item()'>Retrieve and give the item!</button> <br><br>
                 </div>
 
                 <!-- col 2: display item after button is pressed, also the next column of actions is displayed-->
@@ -152,12 +151,7 @@ time spent:  hrs -->
               <div class="row justify-content-md-center">
                 <!-- col 1: button that does said action -->
                 <div class="col-sm">
-                  <form>
-                    <br>
-                    <input type="radio" id="yes-no" name="yes-no" value="yes-no">
-                    <label for="yes-no" class="yes-no-label"></label>See reaction!<br><br>
-                  </form>
-                  <button id="yes-no-button" class="btn btn-primary sign" onclick='display_yes_no()'>Confirm</button> <br><br>
+                  <button id="yes-no-button" class="btn btn-primary sign" onclick='display_yes_no()'>See reaction!</button> <br><br>
                 </div>
 
                 <!-- col 2: display reaction, if yes, can you put a nice message and if no, a bad message -->
@@ -190,12 +184,7 @@ time spent:  hrs -->
             <div class="row justify-content-md-center">
               <!-- col 1: button that does said action -->
               <div class="col-sm">
-                <form>
-                  <br>
-                  <input type="radio" id="love-calc" name="love-calc" value="love-calc">
-                  <label for="love-calc" class="love-calc-label"></label>See compatability!<br><br>
-                </form>
-                <button id="love-calc-button" class="btn btn-primary sign" onclick='display_love_calc()'>Confirm</button> <br><br>
+                <button id="love-calc-button" class="btn btn-primary sign" onclick='display_love_calc()'>See compatability!</button> <br><br>
               </div>
 
               <!-- col 2: display reaction, if yes, can you put a nice message and if no, a bad message -->

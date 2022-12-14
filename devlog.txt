@@ -165,6 +165,13 @@ dianaA, gitaeP -- 2022-12-13 01:15
 * Changed coloring of the carousel buttons to make them more visible
 ==============================================================
 
+gitaeP, vivianT, samanthaH -- 2022-12-14 01:20
+--------------------------------------------------------------
+* Got rid of the quiz in home.html so that it looks better and makes more sense for the user interface
+*
+*
+==============================================================
+
 template:
 name -- 2022-12-x xx:xx
 --------------------------------------------------------------

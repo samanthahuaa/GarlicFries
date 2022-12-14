@@ -50,6 +50,7 @@ def authenticate():
             player2 = player_stats()
             full_item = get_item()
             reaction = yes_no()
+            print(reaction[0])
             calculator = calculate_love(player1[0], player2[0], reaction[0])
             if calculator >= 75:
                 outing = sunset_sunrise()

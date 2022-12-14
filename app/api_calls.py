@@ -10,12 +10,23 @@ app = Flask(__name__)
 # LOVE CALC
 def calculate_love(fname, sname, result):
     key = ""
-    with open("keys/key_love_calculator.txt", "r") as f:
-        key = f.read()
 
+    if result == "yes":
+        multiplier = 1.2
+    else:
+        multiplier = 0.8
+
+    placeholder_percentage = random.randint(0,100)*multiplier
+
+    try:
+        with open("keys/key_love_calculator.txt", "r") as f:
+            key = f.read()
+    except:
+        print("ALERT THERE IS NO KEY FILE")
+        return placeholder_percentage
     # if key is empty, return our standard percent
     if key == "":
-        return 50
+        return placeholder_percentage
     
     url = "https://love-calculator.p.rapidapi.com/getPercentage"
     querystring = {"fname":fname, "sname":sname}
@@ -28,14 +39,9 @@ def calculate_love(fname, sname, result):
     try:
         data = requests.get(url, headers=headers, params=querystring) #gets data from the website
     except:
-        return 50
+        return placeholder_percentage
 
     data = requests.get(url, headers=headers, params=querystring) #gets data from the website
-
-    if result == "yes":
-        multiplier = 1.2
-    else:
-        multiplier = 0.8
 
     percentage = float(json.loads(data.text)["percentage"]) * multiplier #data.text turns data into a string, json.loads converts json string to dictionary
     percentage = round(percentage, 2)
@@ -52,20 +58,6 @@ def sunset_sunrise():
     rand = random.randint(0,1)
     sun = ""
     if rand == 0:
-        sun = "sunset"
-    else:
-        sun = "sunrise"
-    days = random.randint(7,14)
-    date = str(datetime.now() + timedelta(days))
-    # date looks like this 2022-12-22 17:06:16.372884 so we need to truncate it
-    date = date[:10]
-    url = f"https://api.sunrise-sunset.org/json?date={date}&lat=40.7699&long=-73.9753" # lat long is for the central park carousel
-    data = requests.get(url) #gets data from the website
-    # percentage = json.loads(data.text)["percentage"] #data.text turns data into a string, json.loads converts json string to dictionary
-    time = json.loads(data.text)["results"][sun]
-    img_date = ""
-    
-    if "PM" in time:
         time = "Sunset"
         img_date = "https://secretnyc.co/wp-content/uploads/2022/03/New-Project-9.png"
     else:
