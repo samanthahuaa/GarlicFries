@@ -158,6 +158,13 @@ samanthaH -- 2022-12-13 01:15
 * Added a gitignore to our repo
 ==============================================================
 
+dianaA, gitaeP -- 2022-12-13 01:15
+--------------------------------------------------------------
+* Made sure that the user will be redirected to the login page if they are not in session and try to go to the home page by changing the link
+* Created username and password requirements (both have to be at least 8 characters long)
+* Changed coloring of the carousel buttons to make them more visible
+==============================================================
+
 template:
 name -- 2022-12-x xx:xx
 --------------------------------------------------------------
