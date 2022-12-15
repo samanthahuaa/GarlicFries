@@ -50,12 +50,11 @@ def authenticate():
             player2 = player_stats()
             full_item = get_item()
             reaction = yes_no()
-            print(reaction[0])
             calculator = calculate_love(player1[0], player2[0], reaction[0])
-            if calculator >= 75:
+            if calculator >= 60:
                 outing = sunset_sunrise()
                 names = str(player1[0]) + " and " + str(player1[2]) + " will have their first date!"
-                loc = "Location: Central Park"
+                loc = "Location: Central Park Carousel"
                 dat = "Date: " + str(outing[0])
                 tim = "Time: " + str(outing[1])
                 img = outing[2]

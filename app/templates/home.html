@@ -151,7 +151,7 @@ time spent:  hrs -->
               <div class="row justify-content-md-center">
                 <!-- col 1: button that does said action -->
                 <div class="col-sm">
-                  <button id="yes-no-button" class="btn btn-primary sign" onclick='display_yes_no()'>See reaction!</button> <br><br>
+                  <br><button id="yes-no-button" class="btn btn-primary sign" onclick='display_yes_no()'>See reaction!</button> <br><br>
                 </div>
 
                 <!-- col 2: display reaction, if yes, can you put a nice message and if no, a bad message -->
@@ -184,12 +184,12 @@ time spent:  hrs -->
             <div class="row justify-content-md-center">
               <!-- col 1: button that does said action -->
               <div class="col-sm">
-                <button id="love-calc-button" class="btn btn-primary sign" onclick='display_love_calc()'>See compatability!</button> <br><br>
+                <br><button id="love-calc-button" class="btn btn-primary sign" onclick='display_love_calc()'>See compatability!</button> <br><br>
               </div>
 
               <!-- col 2: display reaction, if yes, can you put a nice message and if no, a bad message -->
               <div class="col-sm" id="display-love-calc">
-                <br><br><b>{{percentage}}%</b>
+                <br><b>{{percentage}}%</b>
                 <!-- we can put condition using jinja code: depending on percentage, we can display a message -->
               </div>
             </div>
@@ -220,7 +220,7 @@ time spent:  hrs -->
             <br><b>{{name_date}}</b><br>
             {{location}} <br>
             {{date}} <br>
-            {{time}} <br><br>
+            {{time}} <br>
             <img src={{img_date}} id="image_date">
             </center>
             <br><br>

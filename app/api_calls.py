@@ -16,7 +16,8 @@ def calculate_love(fname, sname, result):
     else:
         multiplier = 0.8
 
-    placeholder_percentage = random.randint(0,100)*multiplier
+    placeholder_percentage = round(random.randint(0,100)*multiplier, 2)
+    # placeholder_percentage = 100
 
     try:
         with open("keys/key_love_calculator.txt", "r") as f:
@@ -57,12 +58,20 @@ def calculate_love(fname, sname, result):
 def sunset_sunrise():
     rand = random.randint(0,1)
     sun = ""
+
+    # date
+    days = random.randint(7,14)
+    date = str(datetime.now() + timedelta(days))
+    # date looks like this 2022-12-22 17:06:16.372884 so we need to truncate it
+    date = date[:10]
+
     if rand == 0:
         time = "Sunset"
         img_date = "https://secretnyc.co/wp-content/uploads/2022/03/New-Project-9.png"
     else:
         time = "Sunrise"
         img_date = "https://media.timeout.com/images/101886667/750/422/image.jpg"
+    
     return [date, time, img_date]
 
 # print(sunset_sunrise())

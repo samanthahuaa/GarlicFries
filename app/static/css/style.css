@@ -135,16 +135,25 @@ input {
 }
 
 .carousel-control-prev-icon {
-    background-color: #000000;
-    border-radius: 25px;
+    background-color: #662f2c;
+    border-radius: 40px;
+    padding: 2%;
 }
 
 .carousel-control-next-icon {
     background-color: #662f2c;
     border-radius: 25px;
+    padding: 10%;
 }
 
 .carousel-indicators {
     background-color: #662f2c;
     border-radius: 25px;
+}
+
+.form-floating {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;    
 }

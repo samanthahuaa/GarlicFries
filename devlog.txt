@@ -173,6 +173,13 @@ gitaeP, vivianT, samanthaH -- 2022-12-14 01:20
 * Chose a random percent instead of a generic 50% if something was broken with the key and API call
 ==============================================================
 
+gitaeP, vivianT, samanthaH -- 2022-12-15 13:15
+--------------------------------------------------------------
+* Updated design doc
+* Formatting issues in login, home, and create: floating labels, percentage formatting, getting rid of extra line breaks
+* Fixed error on showing date 
+==============================================================
+
 template:
 name -- 2022-12-x xx:xx
 --------------------------------------------------------------

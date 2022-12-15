@@ -34,22 +34,22 @@ time spent:  hrs -->
     <br>
     <form action= "/home" method="POST">
         <!-- username -->
-        <h3>
-          Username:
-            <input type="text" name="username" placeholder="begin typing...">
-        </h3>
+        <div class="form-floating mb-3">
+            <input type="text" name="username" class="form-control" id="floatingInput" placeholder="begin typing...">
+            <label for="floatingInput">Username</label>
+        </div>
         <!-- password -->
-        <h3>
-          Password:
-            <input type="password" name="password" placeholder="begin typing...">
-        </h3>
+        <div class="form-floating mb-3">
+          <input type="password" name="password" class="form-control" id="floatingInput" placeholder="begin typing...">
+          <label for="floatingInput">Password</label>
+        </div>
       <br>
 
       <!-- submit button -->
       <h5>
         <input type="submit" class="btn btn-primary sign btn-block mb-4" name="sub1">
       </h5>
-    {{login}}<br><br>
+    {{login}}
     </form>
 
     <!-- register button -->
