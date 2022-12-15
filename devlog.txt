@@ -167,9 +167,10 @@ dianaA, gitaeP -- 2022-12-13 01:15
 
 gitaeP, vivianT, samanthaH -- 2022-12-14 01:20
 --------------------------------------------------------------
-* Got rid of the quiz in home.html so that it looks better and makes more sense for the user interface
-*
-*
+* Got rid of the radio button in home.html so that it looks better and makes more sense for the user interface
+* Removed unnecessary code in script.js
+* Prevented app from crashing if the key file was absent
+* Chose a random percent instead of a generic 50% if something was broken with the key and API call
 ==============================================================
 
 template:
