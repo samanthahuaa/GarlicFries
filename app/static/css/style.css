@@ -136,14 +136,14 @@ input {
 
 .carousel-control-prev-icon {
     background-color: #662f2c;
-    border-radius: 40px;
-    padding: 2%;
+    border-radius: 15px;
+    padding: 15%;
 }
 
 .carousel-control-next-icon {
     background-color: #662f2c;
-    border-radius: 25px;
-    padding: 10%;
+    border-radius: 15px;
+    padding: 15%;
 }
 
 .carousel-indicators {

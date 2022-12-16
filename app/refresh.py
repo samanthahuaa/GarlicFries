@@ -36,6 +36,7 @@ def player_stats_helper(id): # want id to be an argument so that we can use this
         return data[0]["games_played"]
     return "No data on player"
 
+
 # print(player_stats())
 
 if __name__ == "__main__":
