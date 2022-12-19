@@ -185,6 +185,13 @@ gitaeP, vivianT, samanthaH -- 2022-12-16 13:08
 * Updated design doc
 * Fixed buttons on the summary at the bottom
 * Consulted Bootstrap documentation on how to make our progress bar update as the user moves through the website
+* Made progress bar, need finishing up
+==============================================================
+
+dianaA, gitaeP, vivianT, samanthaH -- 2022-12-19 13:11
+--------------------------------------------------------------
+* Finalized progress bar
+* Disabled buttons after clicked
 ==============================================================
 
 

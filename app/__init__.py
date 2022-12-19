@@ -1,7 +1,12 @@
+# Garlic Fries: Diana Akhmedova, Samantha Hua, Gitae Park, Vivian Teo
+# SoftDev
+# P01 -- NBA Love Story
+# 2022-12-21
+# time spent:  hrs
+
 import sqlite3
 from refresh import *
 from api_calls import *
-# from user_db import *
 from flask import Flask, redirect, render_template, request, session, url_for
 
 # sqlite
@@ -14,15 +19,13 @@ command = "create table IF NOT EXISTS login (user TEXT, password TEXT)"
 c.execute(command)
 db.commit()
 
-# user history of matches table
-#command = "create table IF NOT EXISTS history (user TEXT, 
-
 # flask
 app = Flask(__name__)
 app.secret_key = 'a\8$x5T!H2P7f\m/rwd[&'
 
 @app.route("/")
 def index():
+    # if there is a session in place, divert the user to the main page
     if 'username' in session:
         return render_template('home.html', status="Successfully logged in!")
     else:

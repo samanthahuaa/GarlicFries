@@ -1,3 +1,9 @@
+# Garlic Fries: Diana Akhmedova, Samantha Hua, Gitae Park, Vivian Teo
+# SoftDev
+# P01 -- NBA Love Story
+# 2022-12-21
+# time spent:  hrs
+
 from flask import Flask, session, render_template, request, redirect
 from datetime import datetime, timedelta
 # from urllib import request # can not do "import request"
